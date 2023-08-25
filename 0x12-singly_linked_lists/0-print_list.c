@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "lists.h"
+#include <stdlib.h>
 
 /**
  * print_list - to prints and checks the code
@@ -17,9 +18,9 @@ size_t print_list(const list_t *h)
 		if (h->str == NULL)
 			printf("[0] (nil)\n");
 		else
-			printf("[%d] %s\n", h->len, h->str);
-		h = h->next;
+			printf("[%u] %s\n", h->len, h->str);
 		count++;
+		h = h->next;
 	}
 
 	return (count);
